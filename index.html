@@ -125,25 +125,18 @@
           order: -1;
           margin-bottom: 2rem;
         }
-      }
-
-          /* df-messenger {
-      --df-messenger-background-color: #f0f4c3; 
-      --df-messenger-bot-message: #80cbc4; 
-      --df-messenger-bot-message-color: #37474f;
-      --df-messenger-user-message: #ffab91; 
-      --df-messenger-user-message-background: #fff;
-      --df-messenger-user-message-color: #37474f; 
-      --df-messenger-button-background-color: #80cbc4;
-      --df-messenger-button-text-color: #37474f; 
-      --df-messenger-input-box-border-color: #80cbc4;
-      --df-messenger-input-box-text-color: #37474f; 
-      --df-messenger-send-button-background: #ffab91;
-      --df-messenger-send-button-color:
-      --df-messenger-input-box-background-color: #fff;
-      } */
-
-      
+      }    
+      df-messenger {
+            z-index: 999;
+            position: fixed;
+            --df-messenger-font-color: #000;
+            --df-messenger-font-family: Google Sans;
+            --df-messenger-chat-background: #EEF7EE;
+            --df-messenger-message-user-background: #FCE8B2;
+            --df-messenger-message-bot-background: #C8E6C9;
+            bottom: 16px;
+            right: 16px;
+          }
     </style>
     <link
       rel="stylesheet"
@@ -192,13 +185,15 @@
       </div>
 
       <div class="chat-container">
+        <link rel="stylesheet" href="https://www.gstatic.com/dialogflow-console/fast/df-messenger/prod/v1/themes/df-messenger-default.css">
         <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
         <df-messenger
-        intent="WELCOME"
-        chat-title="👩‍💻 Asista (Asisten Asia)"        
-        agent-id="9544a2ff-2362-4a53-803b-59073355c495"
-        language-code="id"
-        ></df-messenger>
+          intent="WELCOME"    
+          agent-id="9544a2ff-2362-4a53-803b-59073355c495"
+          language-code="id"
+          <df-messenger-chat-bubble
+            chat-title="👩‍💻 Asista (Asisten Asia)"
+          ></df-messenger-chat-bubble>
       </div>
     </div>
 
