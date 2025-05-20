@@ -182,20 +182,34 @@
         <p>
           Kamu dapat bertanya ke Asista 24 jam non-stop melalui tombol chat di pojok kanan bawah ↘
         </p>
-      </div>
-
-      <div class="chat-container">
-        <link rel="stylesheet" href="https://www.gstatic.com/dialogflow-console/fast/df-messenger/prod/v1/themes/df-messenger-default.css">
-        <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
-        <df-messenger
-          intent="WELCOME"    
-          agent-id="9544a2ff-2362-4a53-803b-59073355c495"
-          language-code="id"
-          <df-messenger-chat-bubble
-            chat-title="👩‍💻 Asista (Asisten Asia)"
-          ></df-messenger-chat-bubble>
-      </div>
+      </div>      
     </div>
+
+    <div>
+        <link rel="stylesheet" href="https://www.gstatic.com/dialogflow-console/fast/df-messenger/prod/v1/themes/df-messenger-default.css">
+        <script src="https://www.gstatic.com/dialogflow-console/fast/df-messenger/prod/v1/df-messenger.js"></script>
+        <df-messenger
+          intent="WELCOME"          
+          agent-id="9544a2ff-2362-4a53-803b-59073355c495"
+          language-code="id"                    
+          <df-messenger-chat-bubble
+            chat-title="👩‍💻 Asista (Asisten Asia)">
+          </df-messenger-chat-bubble>
+        </df-messenger>
+        <style>
+          df-messenger {
+            z-index: 999;
+            position: fixed;
+            --df-messenger-font-color: #000;
+            --df-messenger-font-family: Google Sans;
+            --df-messenger-chat-background: #EEF7EE;
+            --df-messenger-message-user-background: #FCE8B2;
+            --df-messenger-message-bot-background: #C8E6C9;
+            bottom: 16px;
+            right: 16px;
+          }
+        </style>
+      </div>
 
     <footer>
       <p>© 2025 Institut Teknologi dan Bisnis Asia Malang - Layanan Penerimaan Mahasiswa Baru</p>
